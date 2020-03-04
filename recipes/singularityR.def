@@ -78,16 +78,16 @@ Stage: build
   echo install.packages\(\"R6\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
   echo install.packages\(\"Rcpp\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
   
-  echo install.packages\(\"dplyr\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
-  echo install.packages\(\"nloptr\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
-  echo install.packages\(\"DiceDesign\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
-  echo install.packages\(\"doParallel\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
-  echo install.packages\(\"XML\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
-  echo install.packages\(\"lubridate\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
-  echo install.packages\(\"data.table\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
-  echo install.packages\(\"stringi\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
-  echo install.packages\(\"sensitivity\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
-  echo install.packages\(\"dfoptim\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
+  #echo install.packages\(\"dplyr\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
+  #echo install.packages\(\"nloptr\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
+  #echo install.packages\(\"DiceDesign\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
+  #echo install.packages\(\"doParallel\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
+  #echo install.packages\(\"XML\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
+  #echo install.packages\(\"lubridate\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
+  #echo install.packages\(\"data.table\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
+  #echo install.packages\(\"stringi\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
+  #echo install.packages\(\"sensitivity\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
+  #echo install.packages\(\"dfoptim\"\, repos\=\'https://cloud.r-project.org\'\) | R --slave
 
   # installing SticsRPacks packages
   #echo install.packages\(\"/tmp/SticsRFiles_0.0.0.9000.tar.gz\"\,repos\=NULL\, type \= \"source\"\) | R --slave
@@ -95,9 +95,7 @@ Stage: build
   #echo install.packages\(\"/tmp/SticsOptimizR_0.0.0.9000.tar.gz\"\,repos\=NULL\, type \= \"source\"\) | R --slave  
 
   # Installing SticsRPacks packages
-  echo devtools::install_github\(\"SticsRPacks/SticsRFiles\"\) | R --slave
-  echo devtools::install_github\(\"SticsRPacks/SticsOnR\"\) | R --slave
-  echo devtools::install_github\(\"SticsRPacks/SticsOptimizR\"\) | R --slave
+  echo devtools::install_github\(\"SticsRPacks/SticsRPacks\"\) | R --slave
 
   # Clean up
   rm -rf /var/lib/apt/lists/*
