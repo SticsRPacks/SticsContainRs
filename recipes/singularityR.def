@@ -6,7 +6,7 @@ Stage: build
 %labels
   Maintainer Patrice Lecharpentier <patrice.lecharpentier@inra.fr>
   Updater Samuel Buis <samuel.buis@inra.fr>
-  R_Version 3.6.1
+  R_Version 3.6.3
 
 %apprun R
   exec R "${@}"
@@ -24,7 +24,7 @@ Stage: build
 
 %post
   # Software versions
-  export R_VERSION=3.6.1
+  export R_VERSION=3.6.3
 
   # Get dependencies
   apt-get update
@@ -54,7 +54,9 @@ Stage: build
     libxml2-dev \
     libcairo2-dev \
     libxt-dev \
-    libicu-dev
+    libicu-dev \
+    libgmp-dev \
+    libxslt1-dev
     
 
   # Add a default CRAN mirror
