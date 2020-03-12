@@ -56,7 +56,8 @@ Stage: build
     libxt-dev \
     libicu-dev \
     libgmp-dev \
-    libxslt1-dev
+    libxslt1-dev \
+    openjdk-8-jdk
     
 
   # Add a default CRAN mirror
